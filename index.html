@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PET SHOP ONLINE: alimentos, juguetes y accesorios para consentir a tus mascotas.">
+  <title>PET SHOP ONLINE | Todo para tu mascota</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="top-strip">🐾 ¡Todo lo que tu mascota necesita, en un solo lugar! <span>Envíos disponibles en Ecuador</span></div>
+  <header class="header">
+    <a class="brand" href="#inicio" aria-label="PET SHOP ONLINE, inicio">
+      <img src="assets/logo-pet-shop.jpeg" alt="Logotipo PET SHOP ONLINE">
+      <span>PET SHOP <small>ONLINE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+    <nav id="mainNav">
+      <a href="#inicio">Inicio</a><a href="#catalogo">Catálogo</a><a href="#ofertas">Ofertas</a><a href="#nosotros">Nosotros</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" id="accountBtn" title="Mi cuenta">♙ <span>Cuenta</span></button>
+      <button class="icon-btn cart-trigger" id="cartBtn" title="Carrito">🛒 <span>Carrito</span><b id="cartCount">0</b></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow">AMOR, CUIDADO Y FELICIDAD</span>
+        <h1>Todo para consentir<br><em>a tu mejor amigo.</em></h1>
+        <p>Encuentra alimentos, juguetes y accesorios para que tus mascotas tengan una vida feliz y saludable.</p>
+        <div class="hero-buttons"><a class="btn primary" href="#catalogo">Comprar ahora <span>→</span></a><a class="text-link" href="#ofertas">Ver ofertas</a></div>
+        <div class="hero-note">♡ Productos para perros y gatos</div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-blob"></div>
+        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?auto=format&fit=crop&w=1000&q=85" alt="Perro y gato juntos">
+        <div class="floating-tag">🐾 <span>Hecho con amor<br><strong>para ellos</strong></span></div>
+      </div>
+    </section>
+
+    <section class="benefits">
+      <div><span>🚚</span><p><strong>Envíos</strong><small>Consulta cobertura</small></p></div>
+      <div><span>♡</span><p><strong>Amor por tus mascotas</strong><small>Productos seleccionados</small></p></div>
+      <div><span>🔒</span><p><strong>Compra sencilla</strong><small>Proceso fácil y seguro</small></p></div>
+    </section>
+
+    <section class="section" id="catalogo">
+      <div class="section-heading"><div><span class="eyebrow">NUESTRO CATÁLOGO</span><h2>Encuentra sus favoritos</h2><p>Todo lo que necesitan, con mucho amor.</p></div>
+        <label class="search-box">⌕ <input id="searchInput" type="search" placeholder="Buscar productos..."></label>
+      </div>
+      <div class="category-pills" id="categoryPills">
+        <button class="active" data-category="Todos">Todos</button>
+        <button data-category="Alimentos para perro">🐶 Perros</button>
+        <button data-category="Alimentos para gatos">🐱 Gatos</button>
+        <button data-category="Camas">Camas</button><button data-category="Juguetes">Juguetes</button>
+        <button data-category="Jaulas">Jaulas</button><button data-category="Productos de limpieza">Limpieza</button><button data-category="Accesorios">Accesorios</button>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+      <p class="empty-state hidden" id="emptyState">No encontramos productos con esa búsqueda.</p>
+    </section>
+
+    <section class="promo" id="ofertas">
+      <div><span class="eyebrow light">PROMOCIONES ESPECIALES</span><h2>¡Un mimo extra<br>para tu mascota!</h2><p>Descubre productos seleccionados y encuentra algo especial para tu compañero.</p><a href="#catalogo" class="btn white">Ver productos <span>→</span></a></div>
+      <div class="promo-paw">🐾</div>
+      <div class="promo-circle">PET<br><strong>LOVE</strong></div>
+    </section>
+
+    <section class="about section" id="nosotros"><div class="about-icon">🐾</div><div><span class="eyebrow">SOBRE NOSOTROS</span><h2>Ellos son parte de la familia.</h2><p>En PET SHOP ONLINE queremos ayudarte a cuidar y consentir a tus mascotas. Por eso reunimos alimentos, accesorios y diversión en un solo lugar.</p></div></section>
+  </main>
+
+  <footer><div class="footer-brand"><img src="assets/logo-pet-shop.jpeg" alt=""><strong>PET SHOP ONLINE</strong></div><p>Todo para tus mascotas, con amor. 🐾</p><small>© 2026 PET SHOP ONLINE. Proyecto demostrativo.</small></footer>
+
+  <div class="overlay hidden" id="cartOverlay">
+    <aside class="drawer"><div class="drawer-head"><div><span class="eyebrow">TU COMPRA</span><h2>Mi carrito</h2></div><button class="close-btn" data-close="cartOverlay">×</button></div>
+      <div id="cartItems" class="cart-items"></div>
+      <div class="cart-summary"><div><span>Subtotal</span><strong id="cartSubtotal">$0.00</strong></div><div><span>Envío</span><strong>Por coordinar</strong></div><div class="total"><span>Total estimado</span><strong id="cartTotal">$0.00</strong></div><button class="btn primary full" id="checkoutBtn">Continuar compra →</button><small>El costo de envío se confirmará al coordinar el pedido.</small></div>
+    </aside>
+  </div>
+
+  <div class="overlay hidden" id="accountOverlay"><section class="modal"><button class="close-btn" data-close="accountOverlay">×</button><span class="eyebrow">BIENVENIDO</span><h2 id="authTitle">Inicia sesión</h2><p class="muted">Ingresa para continuar con tus compras.</p>
+    <form id="authForm"><label>Correo electrónico<input type="email" id="authEmail" placeholder="correo@ejemplo.com" required></label><label>Contraseña<input type="password" id="authPassword" placeholder="Mínimo 4 caracteres" minlength="4" required></label><label id="nameField" class="hidden">Nombre completo<input type="text" id="authName" placeholder="Tu nombre"></label><button class="btn primary full" id="authSubmit">Iniciar sesión</button></form>
+    <p class="switch-auth" id="switchAuth">¿No tienes cuenta? <button>Regístrate</button></p><p class="form-message" id="authMessage"></p><p class="demo-hint">Administrador de demostración: admin@petshop.com / admin123</p>
+  </section></div>
+
+  <div class="overlay hidden" id="checkoutOverlay"><section class="modal checkout-modal"><button class="close-btn" data-close="checkoutOverlay">×</button><span class="eyebrow">ÚLTIMO PASO</span><h2>Finalizar compra</h2><form id="checkoutForm"><label>Nombre completo<input id="buyerName" required placeholder="Tu nombre"></label><label>Teléfono<input id="buyerPhone" required placeholder="Tu número de contacto"></label><label>Dirección de entrega<input id="buyerAddress" required placeholder="Ciudad, sector y dirección"></label><label>Método de pago<select id="paymentMethod"><option>Transferencia bancaria (coordinar)</option><option>Pago contra entrega (consultar disponibilidad)</option><option>Tarjeta (demostración, no procesa pagos)</option></select></label><div class="checkout-total">Total estimado <strong id="checkoutTotal">$0.00</strong></div><button class="btn primary full">Confirmar pedido</button></form><p class="form-message" id="checkoutMessage"></p></section></div>
+
+  <div class="overlay hidden" id="successOverlay"><section class="modal success-modal"><button class="close-btn" data-close="successOverlay">×</button><div class="success-mark">✓</div><span class="eyebrow">¡PEDIDO REGISTRADO!</span><h2>Gracias por tu compra</h2><p id="successText">Tu pedido ha sido guardado.</p><button class="btn primary full" data-close="successOverlay">Seguir comprando</button></section></div>
+
+  <div class="overlay hidden" id="adminOverlay"><section class="modal admin-modal"><button class="close-btn" data-close="adminOverlay">×</button><span class="eyebrow">PANEL DE CONTROL</span><h2>Administración</h2><div class="admin-tabs"><button class="active" data-tab="manage">Productos</button><button data-tab="orders">Pedidos</button><button data-tab="users">Cuentas</button></div><div id="adminContent"></div></section></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
